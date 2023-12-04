@@ -69,9 +69,9 @@ object Form1: TForm1
     OnClick = buttonFileRefClick
   end
   object GroupBox1: TGroupBox
-    Left = 288
-    Top = 128
-    Width = 129
+    Left = 271
+    Top = 192
+    Width = 146
     Height = 81
     Caption = 'date'#12398#27604#36611#25991#23383#25968
     TabOrder = 4
@@ -91,6 +91,32 @@ object Form1: TForm1
       Width = 113
       Height = 17
       Caption = '16'#25991#23383'('#20998#12414#12391')'
+      TabOrder = 1
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 271
+    Top = 98
+    Width = 146
+    Height = 81
+    Caption = 'dx'#12398#27604#36611#26041#27861
+    TabOrder = 5
+    object radioDxPfx: TRadioButton
+      Left = 16
+      Top = 24
+      Width = 113
+      Height = 17
+      Caption = #12459#12531#12488#12522#12540'(dx_pfx)'
+      Checked = True
+      TabOrder = 0
+      TabStop = True
+    end
+    object radioDxCont: TRadioButton
+      Left = 16
+      Top = 47
+      Width = 113
+      Height = 17
+      Caption = #22823#38520'(dx_cont)'
       TabOrder = 1
     end
   end

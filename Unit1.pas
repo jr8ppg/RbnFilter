@@ -39,6 +39,9 @@ type
     checkDateCompare13: TRadioButton;
     checkDateCompare16: TRadioButton;
     Label1: TLabel;
+    GroupBox2: TGroupBox;
+    radioDxPfx: TRadioButton;
+    radioDxCont: TRadioButton;
     procedure buttonStartClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure buttonFileRefClick(Sender: TObject);
@@ -83,6 +86,7 @@ var
    strFiltered: string;
    strExt: string;
    nDateCompare: Integer;
+   nDxCompare: Integer;
 begin
    slFile := TStringList.Create();
    slLine := TStringList.Create();
@@ -98,6 +102,13 @@ begin
       end
       else begin
          nDateCompare := 16;
+      end;
+
+      if radioDxPfx.Checked = True then begin
+         nDxCompare := 6;
+      end
+      else begin
+         nDxCompare := 7;
       end;
 
       strExt := ExtractFileExt(editFileName.Text);
@@ -129,7 +140,7 @@ begin
 
             // 1234567890123456
             // 2023-11-25 00:00:00
-            key := slLine[5] + slLine[4] + slLine[12] + Copy(slLine[10], 1, nDateCompare);
+            key := slLine[5] + slLine[4] + slLine[nDxCompare] + Copy(slLine[10], 1, nDateCompare);
 
             if list.ContainsKey(key) = False then begin
                list.Add(key, slLine.CommaText);
