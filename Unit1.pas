@@ -42,6 +42,8 @@ type
     GroupBox2: TGroupBox;
     radioDxPfx: TRadioButton;
     radioDxCont: TRadioButton;
+    radioDeCont: TRadioButton;
+    radioDePfx: TRadioButton;
     procedure buttonStartClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure buttonFileRefClick(Sender: TObject);
@@ -107,8 +109,14 @@ begin
       if radioDxPfx.Checked = True then begin
          nDxCompare := 6;
       end
-      else begin
+      else if radioDxCont.Checked = True then begin
          nDxCompare := 7;
+      end
+      else if radioDePfx.Checked = True then begin
+         nDxCompare := 1;
+      end
+      else if radioDeCont.Checked = True then begin
+         nDxCompare := 2;
       end;
 
       strExt := ExtractFileExt(editFileName.Text);

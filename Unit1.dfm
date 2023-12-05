@@ -28,8 +28,8 @@ object Form1: TForm1
     ParentFont = False
   end
   object buttonStart: TButton
-    Left = 488
-    Top = 120
+    Left = 498
+    Top = 258
     Width = 113
     Height = 33
     Caption = #38283#22987
@@ -69,8 +69,8 @@ object Form1: TForm1
     OnClick = buttonFileRefClick
   end
   object GroupBox1: TGroupBox
-    Left = 271
-    Top = 192
+    Left = 423
+    Top = 98
     Width = 146
     Height = 81
     Caption = 'date'#12398#27604#36611#25991#23383#25968
@@ -98,7 +98,7 @@ object Form1: TForm1
     Left = 271
     Top = 98
     Width = 146
-    Height = 81
+    Height = 127
     Caption = 'dx'#12398#27604#36611#26041#27861
     TabOrder = 5
     object radioDxPfx: TRadioButton
@@ -119,9 +119,25 @@ object Form1: TForm1
       Caption = #22823#38520'(dx_cont)'
       TabOrder = 1
     end
+    object radioDeCont: TRadioButton
+      Left = 16
+      Top = 93
+      Width = 113
+      Height = 17
+      Caption = #22823#38520'(de_cont)'
+      TabOrder = 2
+    end
+    object radioDePfx: TRadioButton
+      Left = 16
+      Top = 70
+      Width = 113
+      Height = 17
+      Caption = #12459#12531#12488#12522#12540'(de_pfx)'
+      TabOrder = 3
+    end
   end
   object OpenDialog1: TOpenDialog
-    Left = 456
-    Top = 232
+    Left = 200
+    Top = 64
   end
 end
